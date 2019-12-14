@@ -63,7 +63,7 @@ class ViewController: UIViewController {
         //What should happen when a number is entered into the keypad
         if let numValue = sender.currentTitle {
             if numValue == "." && (displayLabel.text?.contains(".") ?? false) {
-                //no-op
+                //no-op; suppress multiple decimal points in our display.
             }
             else if previousKeyPressWasOperator || displayLabel.text == nil || (displayLabel.text == "0" && numValue != ".") {
                 displayLabel.text = numValue
